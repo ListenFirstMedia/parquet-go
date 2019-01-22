@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math/big"
 	"reflect"
+	"strings"
 
 	"github.com/xitongsys/parquet-go/parquet"
 )
@@ -110,6 +111,10 @@ func GoTypeToParquetType(src interface{}, pT *parquet.Type, cT *parquet.Converte
 
 //Scan a string to parquet value; length and scale just for decimal
 func StrToParquetType(s string, pT *parquet.Type, cT *parquet.ConvertedType, length int, scale int) interface{} {
+	if len(strings.TrimSpace(s)) == 0 {
+		return nil
+	}
+
 	if cT == nil {
 		if *pT == parquet.Type_BOOLEAN {
 			var v bool
