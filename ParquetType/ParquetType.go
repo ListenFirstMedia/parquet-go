@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/xitongsys/parquet-go/parquet"
+	"github.com/ListenFirstMedia/parquet-go/parquet"
 )
 
 func TypeNameToParquetType(name string, baseName string) (*parquet.Type, *parquet.ConvertedType) {

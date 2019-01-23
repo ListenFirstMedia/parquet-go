@@ -4,10 +4,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/xitongsys/parquet-go/ParquetFile"
-	"github.com/xitongsys/parquet-go/ParquetReader"
-	"github.com/xitongsys/parquet-go/ParquetWriter"
-	"github.com/xitongsys/parquet-go/parquet"
+	"github.com/ListenFirstMedia/parquet-go/ParquetFile"
+	"github.com/ListenFirstMedia/parquet-go/ParquetReader"
+	"github.com/ListenFirstMedia/parquet-go/ParquetWriter"
+	"github.com/ListenFirstMedia/parquet-go/parquet"
 )
 
 type Student struct {
